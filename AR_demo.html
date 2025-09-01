@@ -7,9 +7,24 @@
 
   </head>
   <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam ; debugUIEnabled: false;">
+    <a-scene
+  embedded
+  vr-mode-ui="enabled: false"
+  arjs="sourceType: webcam; debugUIEnabled: false;"
+>
+  <!-- Anchor that attaches content directly to the real-world camera -->
+  <a-anchor>
+    <!-- Big glowing cube always visible in front -->
+    <a-box position="0 0 -1" color="red" scale="2 2 2" material="emissive: red; emissiveIntensity: 1;"></a-box>
+  </a-anchor>
+
+  <!-- Camera -->
+  <a-camera></a-camera>
+</a-scene>
+
+    <!-- <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam ; debugUIEnabled: false;">
       
-      <!-- Arrow always 3 meters in front of camera
+       Arrow always 3 meters in front of camera
        <a-entity
         id="arrow"
         position="0 0 -3"
@@ -22,9 +37,9 @@
       <!-- Lights -->
     <a-light type="ambient" color="#ffffff"></a-light>
     <a-light type="directional" position="1 1 1"></a-light>
-      <!-- Camera -->
+      <!-- Camera 
       <a-camera id="camera"></a-camera>
 
-    </a-scene>
+    </a-scene> -->
   </body>
 </html>
